@@ -72,3 +72,31 @@ function scrollToSectionWithGap(event, id, offset) {
     behavior: "smooth",
   });
 }
+
+// Function to show the modal
+function showModal(event, platform) {
+  event.preventDefault();  // Prevent the default anchor link behavior (scrolling to top)
+
+  // Set the message depending on the clicked platform
+  const message = `The social links are not targeted to any platform yet. You clicked on ${platform}.`;
+  document.getElementById('modalMessage').innerText = message;
+
+  // Show the modal
+  document.getElementById('socialModal').style.display = "block";
+}
+
+// Function to close the modal
+function closeModal() {
+  // Hide the modal
+  document.getElementById('socialModal').style.display = "none";
+}
+
+// Close the modal if the user clicks anywhere outside of the modal content
+window.onclick = function(event) {
+  const modal = document.getElementById('socialModal');
+  if (event.target === modal) {
+    closeModal();
+  }
+}
+
+
