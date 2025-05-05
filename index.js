@@ -78,7 +78,7 @@ function showModal(event, platform) {
   event.preventDefault();  // Prevent the default anchor link behavior (scrolling to top)
 
   // Set the message depending on the clicked platform
-  const message = `The social links are not targeted to any platform yet. You clicked on ${platform}.`;
+  const message = `The social links are not targeted to any platform yet untill site is official. You clicked on ${platform}.`;
   document.getElementById('modalMessage').innerText = message;
 
   // Show the modal
